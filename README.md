@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+When building the project webpack failed to compile javascript with the following error:   
+`error:0308010C:digital envelope routines::unsupported`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In order to make webpack work try: 
+- set the variable in bash: `export NODE_OPTIONS=--openssl-legacy-provider`
+- update npm packages with: `npm upgrade --save`
