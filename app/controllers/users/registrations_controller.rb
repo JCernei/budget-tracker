@@ -53,6 +53,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if res.code == '200'
       current_user.customer_id = JSON.parse(res.body)['data']['id'].to_i
       current_user.save
+    end
   end
 
   # GET /resource/edit
