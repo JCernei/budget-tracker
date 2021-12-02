@@ -1,2 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div>
+    <img class="marginauto" src="main_logo(b).png" alt="centered image" />
+</div>
+
+<h1 style="text-align:center;">All your bank accounts in one app</h1>
+<br>
+<p style="text-align:center">
+    To get started go to your:
+    <%= link_to "Account", account_index_path, class: 'btn btn-link' %>
+</p>

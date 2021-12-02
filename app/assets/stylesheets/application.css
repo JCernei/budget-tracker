@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+    width: 400px;
+}
