@@ -1,0 +1,28 @@
+<h1>Transactions</h1>
+<br>
+<% if @transactions %>
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>made on</th>
+        <th>amount</th>
+        <th>currency</th>
+        <th>description</th>
+        <th>category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @transactions.each do |transaction| %>
+        <tr>
+          <td><%= transaction["made_on"] %></td>
+          <td><%= transaction["amount"] %></td>
+          <td><%= transaction["currency_code"] %></td>
+          <td><%= transaction["description"] %></td>
+          <td><%= transaction["category"] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to "Back", :back %>
