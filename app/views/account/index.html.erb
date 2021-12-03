@@ -14,11 +14,16 @@
   <% @connections.each do |connection| %>
     <% if @accounts %>
       <table class="table caption-top table-hover">
-        <caption>
-          <%= connection["provider_name"] %>
-          <button class="btn btn-link">
+        <caption class="bank">
+          
+          <span class="bank-name">
+            <%= connection["provider_name"] %>
+          </span>
+        
+          <button class="btn btn-link remove-bank">
                 <%= link_to "Remove Bank", account_remove_connection_path(connection) , method: :delete %>
           </button>
+
         </caption>
         <thead class="table-dark">
           <tr>
