@@ -24,12 +24,12 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Sign up", class: "btn btn-dark", style: "margin-top: 10px;" %>
+      <div class="sign-up">
+        <%= f.submit "Sign up", class: "btn btn-dark"%>
       </div>
     <% end %>
   </div>
 </div>
 
-<p style= "margin-bottom: -5px;"> Already have an account? </p>
+<p class="have-account"> Already have an account? </p>
 <%= render "devise/shared/links" %>

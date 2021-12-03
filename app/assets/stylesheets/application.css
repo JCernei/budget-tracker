@@ -14,8 +14,35 @@
  *= require_self
  */
 
-.marginauto {
+.center-image {
     margin: 10px auto 20px;
     display: block;
     width: 400px;
+}
+
+.update {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.have-account {
+    margin-bottom: -5px;
+}
+
+.forgot-password, .sign-up {
+    margin-top: 10px;
+}
+
+.get-started {
+    text-align: center;
+}
+
+.bank {
+    text-align: center;
+}
+
+span.bank-name {
+    font-size: 150%;
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
