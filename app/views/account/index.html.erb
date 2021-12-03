@@ -7,3 +7,43 @@
     <%= button_to "Connect to bank", { action: "create_session" }, class: "btn btn-dark" %>
   </div>
 </div>
+<br>
+
+<div class= "container">
+<% if @connections %>
+  <% @connections.each do |connection| %>
+    <% if @accounts %>
+      <table class="table caption-top table-hover">
+        <caption>
+          <%= connection["provider_name"] %>
+          <button class="btn btn-link">
+                <%= link_to "Remove Bank", account_remove_connection_path(connection) , method: :delete %>
+          </button>
+        </caption>
+        <thead class="table-dark">
+          <tr>
+            <th>name</th>
+            <th>nature</th>
+            <th>balance</th>
+            <th>currency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @accounts.select{|a| a["connection_id"] == connection["id"] }.each do |account| %>
+            <tr>
+              <td>
+                <button class="btn btn-link"> 
+                  <%= link_to account["name"], transactions_index_path(account) %>
+                </button>
+              </td>
+              <td><%= account["nature"] %></td>
+              <td><%= account["balance"] %></td>
+              <td><%= account["currency_code"] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  <% end %>
+<% end %>
+</div>
